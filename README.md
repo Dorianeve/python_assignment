@@ -17,11 +17,14 @@ Viaggiare tra città implica diverse 'durate':
 
 ### Flusso di lavoro
 Il gruppo ha lavorato su questa repository utilizzando Jupyter Notebook.
+I dati sono nella cartella 'data' del repository.
 
 ### Libreria necessarie all'esecuzione dello script
-Pandas, Numpy, Sklearn, Math, NetworkX, Plotly
+Pandas, Numpy, Sklearn, Scipy, Math, NetworkX, Plotly
+
 
 ## Implementazione
+
 Nello script della repository, ogni riga di codice è commentata dalla descrizione di quello che il codice implementa, in lingua inglese. In questo documento sono presentati i passaggi concettuali che il codice percorre per rispondere alla traccia di progetto. Il programma lavora sulla creazione di una matrice contenenti i "pesi" necessari per viaggiare tra città, già "direzionato" verso est, escludendo dunque ogni combinazione possibile nella direzione opposta.
 
 ### Data leaning and preparation
@@ -65,11 +68,15 @@ Abbiamo così la struttura data che può essere utilizzata da NetworkX per calco
 
 
 ## Soluzione
-Il nostro percorso più breve tocca 67 città nel mondo, e impiega 278 ore, quindi approssimativamente 11 giorni e mezzo per fare il giro del mondo.
+
+Il nostro percorso più breve tocca 66 città nel mondo (non contando Londra duplicata come città di partenza), e impiega 278 ore, quindi approssimativamente 11 giorni e mezzo per fare il giro del mondo.
+
 
 ## Data visualization
+
 Al fine di dare una rappresentazione grafica del percorso ottimo che il programma ha calcolato, si è scelto di precedere a plottare sulla mappa del mondo la traiettoria ottenuta connettendo le città visitate. 
 A tale scopo abbiamo utilizzato "Plotly", che permette, attraverso l'oggetto grafico "Scattergeo", di plottare le coordinate delle città visitate e di unirle con una linea sulla cartina del mondo. Coordinate e elenco delle città sono stati inseriti in un dataframe (ottenuto filtrando il dataframe originale di tutte le città per le sole città toccate dal percorso) che è stato usato a sua volta come input per Scattergeo. Per ogni città è presente un marker che ne indica la posizione e tutti i marker, come detto, sono collegati da una linea che rappresenta idealmente il percorso compiuto per completare il giro del mondo.
+
 
 ## References
 
@@ -78,5 +85,3 @@ A tale scopo abbiamo utilizzato "Plotly", che permette, attraverso l'oggetto gra
 Al-Taie MZ, Kadry S (2017) Python for Graph and Network Analysis. Springer, Cham.
 
 'NetworkX. Network Analysis in Python' (2020). https://networkx.org/. Accessed 20 Dec 2020.
-
-
