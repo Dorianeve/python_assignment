@@ -68,9 +68,8 @@ Abbiamo così la struttura data che può essere utilizzata da NetworkX per calco
 Il nostro percorso più breve tocca 67 città nel mondo, e impiega 278 ore, quindi approssimativamente 11 giorni e mezzo per fare il giro del mondo.
 
 ## Data visualization
-
-da completare
-
+Al fine di dare una rappresentazione grafica del percorso ottimo che il programma ha calcolato, si è scelto di precedere a plottare sulla mappa del mondo la traiettoria ottenuta connettendo le città visitate. 
+A tale scopo abbiamo utilizzato "Plotly", che permette, attraverso l'oggetto grafico "Scattergeo", di plottare le coordinate delle città visitate e di unirle con una linea sulla cartina del mondo. Coordinate e elenco delle città sono stati inseriti in un dataframe (ottenuto filtrando il dataframe originale di tutte le città per le sole città toccate dal percorso) che è stato usato a sua volta come input per Scattergeo. Per ogni città è presente un marker che ne indica la posizione e tutti i marker, come detto, sono collegati da una linea che rappresenta idealmente il percorso compiuto per completare il giro del mondo.
 
 ## References
 
